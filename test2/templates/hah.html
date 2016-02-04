@@ -1,0 +1,28 @@
+{% include "header.html" %}
+<div id="content">
+
+	<div class="post">
+		<div class="post-date">
+			<span style='display:none' class='dateString'>{{Today}}</span>
+			<span class="post-date-week"></span>
+			<span class="post-date-day"></span>
+		</div>
+		<div class="post-body">
+			{% for s in stories %}
+			<div class="item">
+				<a href={{s.share_url}} >
+					<img src={{s.thumbnail}}  alt=''/>
+					<span class='title'>{{s.title}}</span>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	
+
+	
+</div>
+
+	
+{% include "footer.html" %}
